@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Inter } from "next/font/google";
 
+import { Toaster } from "@/components/ui/sonner";
 import { Providers } from "@/components/providers";
 
+import "allotment/dist/style.css";
 import "./globals.css";
-import { Authenticated } from "convex/react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -34,6 +35,7 @@ export default function RootLayout({
         >
           <Providers>
             {children}
+            <Toaster />
           </Providers>
         </body>
       </html>
